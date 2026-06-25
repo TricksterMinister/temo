@@ -7,7 +7,7 @@ const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 /* Smooth scroll */
 let lenis = null;
 if (!reduce && window.Lenis) {
-  lenis = new Lenis({ duration: 1.15, smoothWheel: true, touchMultiplier: 1.6 });
+  lenis = new Lenis({ duration: 0.9, easing: (t)=>1-Math.pow(1-t,3), smoothWheel: true, wheelMultiplier: 1.0, touchMultiplier: 1.4, syncTouch: true });
   function raf(t){ lenis.raf(t); requestAnimationFrame(raf); }
   requestAnimationFrame(raf);
   document.querySelectorAll('a[href^="#"]').forEach((a) => {

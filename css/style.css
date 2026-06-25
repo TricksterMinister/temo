@@ -207,6 +207,11 @@ h1,h2,h3{font-family:var(--font-display);font-weight:600;letter-spacing:-0.02em;
 @media (min-width:780px){
   :root{--pad:54px}
   .section{padding:150px 0}
+  /* editorial chapter head: meta row (number ........ annotation) opens horizontally, giant title below */
+  .section-head{display:grid;grid-template-columns:1fr minmax(0,auto);grid-template-areas:"num deck" "title title";align-items:end;column-gap:48px;row-gap:24px;padding-top:24px;border-top:1px solid var(--line);margin-bottom:56px}
+  .section-head .section-num{grid-area:num;margin-bottom:0;align-self:start}
+  .section-head .section-title{grid-area:title}
+  .section-head .section-sub{grid-area:deck;margin-top:0;justify-self:end;text-align:right;max-width:38ch;font-size:clamp(15px,1.45vw,18px);line-height:1.45}
   .about-grid{grid-template-columns:1.05fr 0.95fr;gap:70px}
   .duel{grid-template-columns:1fr 1fr;gap:84px}
   .duel::before{content:"";position:absolute;left:50%;top:6px;bottom:6px;width:1px;background:var(--line)}
