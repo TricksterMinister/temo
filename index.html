@@ -4,26 +4,49 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>Теймураз Бенидзе - один человек, не агентство</title>
-  <meta name="description" content="Теймураз Бенидзе. Первый сомелье Грузии, ресторатор, десять лет в Нью-Йорке. Специалист по искусственному интеллекту. Опыт, который не купишь. Владение ИИ, которое не подделаешь.">
+  <meta name="description" content="Теймураз Бенидзе. Первый сомелье Грузии, ресторатор, десять лет в Нью-Йорке. Оператор ИИ. Опыт, который не купишь. Владение искусственным интеллектом, которое не подделаешь.">
 
+  <!-- OpenGraph Previews -->
   <meta property="og:title" content="Теймураз Бенидзе - один человек, не агентство">
   <meta property="og:description" content="Опыт, который не купишь. Владение искусственным интеллектом, которое не подделаешь. В одном человеке.">
   <meta property="og:type" content="website">
-  <meta property="og:image" content="assets/img/me/temo.jpg">
+  <meta property="og:image" content="assets/img/og.jpg">
   <meta property="og:url" content="https://temo.netlify.app/">
-  <meta name="theme-color" content="#f3eee4">
 
-  <link rel="icon" type="image/png" href="assets/img/me/trickster.png">
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/img/favicon.png">
+
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,500..900;1,6..96,400..700&family=Hanken+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Custom Styles -->
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
+  <!-- Header -->
   <header class="topbar">
-    <a href="#top" class="brand"><img src="assets/img/me/trickster.png" alt="" class="brand-mark"><span>Теймураз Бенидзе</span></a>
+    <a href="#top" class="brand">
+      <img src="assets/img/me/trickster.png" alt="Trickster Collective Logo" class="brand-mark">
+      <span>Теймураз Бенидзе</span>
+    </a>
     <div class="topbar-right">
+      <button id="sound-toggle" class="sound-toggle-btn" aria-label="Переключить звук">
+        <svg class="sound-off" viewBox="0 0 24 24" width="14" height="14" stroke="currentColor" stroke-width="2" fill="none">
+          <line x1="23" y1="9" x2="17" y2="15"></line>
+          <line x1="17" y1="9" x2="23" y2="15"></line>
+          <rect x="2" y="9" width="4" height="6"></rect>
+          <path d="M6 9l4-4v14l-4-4"></path>
+        </svg>
+        <svg class="sound-on hidden" viewBox="0 0 24 24" width="14" height="14" stroke="currentColor" stroke-width="2" fill="none">
+          <rect x="2" y="9" width="4" height="6"></rect>
+          <path d="M6 9l4-4v14l-4-4"></path>
+          <path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+        </svg>
+        <span class="sound-btn-text">Звук: Выкл</span>
+      </button>
       <a href="index-en.html" class="lang-switch">EN</a>
       <a href="#contact" class="topbar-cta">Связаться</a>
     </div>
@@ -31,21 +54,25 @@
 
   <main id="top">
 
-    <!-- MASTHEAD (no image) -->
+    <!-- HERO SECTION -->
     <section class="masthead">
+      <canvas id="hero-canvas"></canvas>
       <div class="wrap">
+        <div class="hero-logo-container reveal">
+          <img src="assets/img/me/trickster.png" alt="Trickster Collective Logo" class="hero-logo">
+        </div>
         <p class="kicker reveal">Теймураз Бенидзе · Нью-Йорк</p>
         <h1 class="mast-title reveal">Я делаю то,<br><span class="accent">чего ещё нет.</span></h1>
-        <p class="mast-sub reveal">Опыт, который не купишь. Владение искусственным интеллектом, которое не подделаешь.</p>
-        <a href="#about" class="scroll-cue reveal"><span class="cue-line"></span><span>Дальше</span></a>
+        <p class="mast-sub reveal">Опыт, который не купишь. Владение искусственным интеллектом, которое не подделаешь. Один человек вместо целого агентства.</p>
+        <a href="#about" class="scroll-cue reveal"><span class="cue-line"></span><span>Читать далее</span></a>
       </div>
     </section>
 
     <!-- MARQUEE -->
     <div class="marquee-wrap" aria-hidden="true">
       <div class="marquee">
-        <span>Музыка</span><i>/</i><span>Digital Art</span><i>/</i><span>Видео</span><i>/</i><span>Подкаст NOX</span><i>/</i><span>ORBIS</span><i>/</i><span>Агент Alter</span><i>/</i><span>Автоматизации</span><i>/</i><span>Контент-завод</span><i>/</i>
-        <span>Музыка</span><i>/</i><span>Digital Art</span><i>/</i><span>Видео</span><i>/</i><span>Подкаст NOX</span><i>/</i><span>ORBIS</span><i>/</i><span>Агент Alter</span><i>/</i><span>Автоматизации</span><i>/</i><span>Контент-завод</span><i>/</i>
+        <span>Музыка</span><i>/</i><span>Digital Art</span><i>/</i><span>Видеомонтаж</span><i>/</i><span>Подкаст NOX</span><i>/</i><span>ORBIS Restaurant AI</span><i>/</i><span>Агент Alter</span><i>/</i><span>Автоматизации</span><i>/</i><span>Контент-завод</span><i>/</i>
+        <span>Музыка</span><i>/</i><span>Digital Art</span><i>/</i><span>Видеомонтаж</span><i>/</i><span>Подкаст NOX</span><i>/</i><span>ORBIS Restaurant AI</span><i>/</i><span>Агент Alter</span><i>/</i><span>Автоматизации</span><i>/</i><span>Контент-завод</span><i>/</i>
       </div>
     </div>
 
@@ -54,28 +81,27 @@
       <div class="wrap about-grid">
         <figure class="portrait reveal">
           <img src="assets/img/me/temo.jpg" alt="Теймураз Бенидзе" loading="lazy">
-          <figcaption>Теймураз Бенидзе. Нью-Йорк.</figcaption>
+          <figcaption>Теймураз Бенидзе. Оператор ИИ.</figcaption>
         </figure>
         <div class="about-text">
-          <div class="age-block reveal">
-            <div class="age-mark"><span class="age-num">53</span><span class="age-unit">года</span></div>
-            <ul class="creds">
-              <li>Первый сомелье Грузии</li>
-              <li>Известный ресторатор</li>
-              <li>10 лет в Нью-Йорке</li>
-            </ul>
+          <div class="profile-header reveal">
+            <h2 class="profile-name">Теймураз Бенидзе</h2>
+            <p class="profile-meta">Мне 53 года. Из них 10 лет я прожил в Нью-Йорке.</p>
           </div>
-          <p class="reveal">Я не разработчик, не кодер, не айтишник. Я специалист по искусственному интеллекту. Чего не знал вчера, сегодня утром делаю как профессионал. Беру ИИ и строю из него всё: от арта и контента до автоматизаций и стартапа.</p>
+          <div class="profile-tagline reveal">
+            Первый сомелье Грузии / Известный ресторатор / Оператор ИИ
+          </div>
+          <p class="reveal">Я не просто использую нейросети - я ими командую. То, чего я не знал вчера, сегодня утром уже работает на полную мощность. Мой жизненный опыт, вкус и бизнес-интуиция нарабатывались десятилетиями в реальном секторе. ИИ дал мне суперспособность: реализовывать любые решения со скоростью мысли, без посредников и долгих согласований.</p>
           <div class="langs reveal">
-            <span class="langs-label">Языки</span>
-            <p class="langs-native">Грузинский · Русский · Английский · Португальский</p>
-            <p class="langs-more">Четыре родных, свободно с рождения. Испанский почти свободно. Все остальные - через ИИ, на высоком уровне. <span class="accent">Языкового барьера с клиентом у меня нет.</span></p>
+            <span class="langs-label">Языки коммуникации</span>
+            <p class="langs-native">Грузинский / Русский / Английский / Португальский</p>
+            <p class="langs-more">Четыре родных языка, свободно с рождения. Испанский - практически свободно. Все остальные языки мира я с легкостью подключаю через ИИ-инструменты при необходимости.</p>
           </div>
-          <nav class="links reveal" aria-label="Ссылки">
+          <nav class="links reveal" aria-label="Социальные сети">
             <a href="https://www.linkedin.com/in/teimuraz-benidze/" target="_blank" rel="noopener">LinkedIn</a>
             <a href="https://www.instagram.com/tricksterny/" target="_blank" rel="noopener">Instagram</a>
             <a href="https://www.facebook.com/temo.benidze" target="_blank" rel="noopener">Facebook</a>
-            <a href="https://www.youtube.com/@CloneReflex" target="_blank" rel="noopener">YouTube · Reflex</a>
+            <a href="https://www.youtube.com/@CloneReflex" target="_blank" rel="noopener">YouTube</a>
           </nav>
         </div>
       </div>
@@ -84,19 +110,19 @@
     <!-- THESIS -->
     <section id="thesis" class="section thesis">
       <div class="wrap">
-        <p class="eyebrow center reveal">Почему я</p>
+        <p class="eyebrow center reveal">Формула превосходства</p>
         <div class="duel">
           <div class="duel-col reveal">
-            <span class="duel-vs">Те, кто моложе</span>
-            <p>Быстрее и свежее. Но у них нет моего опыта: жизни, профессии, вкуса, который собирался десятилетиями.</p>
+            <span class="duel-vs">У 25-летних гиков</span>
+            <p>есть скорость освоения новых технологий, но им катастрофически не хватает жизненного опыта, вкуса, глубокого понимания бизнеса и человеческой психологии.</p>
           </div>
           <div class="duel-col reveal">
-            <span class="duel-vs">Мои ровесники</span>
-            <p>Тот же опыт, что у меня. Но нет моего владения искусственным интеллектом. Я не пользователь. Я оператор.</p>
+            <span class="duel-vs">У моих ровесников</span>
+            <p>есть ценнейший деловой багаж и хватка, но они бесконечно далеки от ИИ и не могут перестроить свои процессы под новые реалии.</p>
           </div>
         </div>
         <p class="verdict-label reveal">Вне конкуренции</p>
-        <p class="verdict reveal">Я единственный,<br>где сходится <span class="accent">и то, и другое.</span></p>
+        <p class="verdict reveal">Я соединяю обе силы:<br>жизненный <span class="accent">опыт</span> и тотальное владение <span class="accent">ИИ.</span></p>
       </div>
     </section>
 
@@ -104,18 +130,18 @@
     <section id="for-you" class="section section-paper">
       <div class="wrap">
         <div class="section-head reveal">
-          <span class="section-num">01 · Под вашу задачу</span>
-          <h2 class="section-title">ИИ в продажи</h2>
-          <p class="section-sub">Точных задач вы не назвали. Главное назвали: внедрить ИИ в продажи. Тогда так.</p>
+          <span class="section-num">01 · Интеграция в бизнес</span>
+          <h2 class="section-title">ИИ в продажи и процессы</h2>
+          <p class="section-sub">Заменяю штаты разработчиков и маркетологов. Проектирую автономные ИИ-системы под любые бизнес-задачи.</p>
         </div>
-        <p class="body-text reveal">Я превращаю искусственный интеллект в работающие инструменты. Построю любого агента для продаж и автоматизирую любой процесс вокруг сделки. Инструмент работает за людей, вы видите результат.</p>
+        <p class="body-text reveal">ИИ-сотрудники не уходят в отпуск, не совершают глупых ошибок и работают круглосуточно. Я собираю ИИ-агентов, которые забирают на себя продажи, рутину бэк-офиса и контроль над операционными показателями, освобождая ваше время.</p>
         <ul class="feature-list">
-          <li class="reveal"><span>01</span>Агент, который ведёт лида от первого касания до закрытия</li>
-          <li class="reveal"><span>02</span>Переписка и ответы голосом вашего бренда</li>
-          <li class="reveal"><span>03</span>Квалификация и приоритизация заявок</li>
-          <li class="reveal"><span>04</span>Автоматизация рутины: счета, follow-up, отчёты</li>
-          <li class="reveal"><span>05</span>Реклама, аккаунты и аналитика под продажи</li>
-          <li class="reveal"><span>06</span>Чего нет в списке, соберу под вашу задачу</li>
+          <li class="reveal"><span>01</span>Автономные ИИ-агенты, самостоятельно ведущие и закрывающие сделки в вашей CRM</li>
+          <li class="reveal"><span>02</span>Синтез голоса и автоматические продажи в мессенджерах в точной тональности бренда</li>
+          <li class="reveal"><span>03</span>Мгновенная квалификация и скоринг входящих лидов 24/7</li>
+          <li class="reveal"><span>04</span>Интеллектуальный бэк-офис: автоматический аудит счетов и споры с контрагентами</li>
+          <li class="reveal"><span>05</span>Настройка трафика, сквозной аналитики и рекламных кампаний силами ИИ-алгоритмов</li>
+          <li class="reveal"><span>06</span>Разработка уникальных ИИ-решений под нестандартные бизнес-задачи за считанные дни</li>
         </ul>
       </div>
     </section>
@@ -123,42 +149,79 @@
     <!-- STATEMENT -->
     <section class="section statement-sec">
       <div class="wrap">
-        <p class="eyebrow reveal">Как я работаю</p>
-        <p class="statement reveal">Вы рассказываете моему агенту, что вам нужно. Дальше я строю это для вас. <span class="accent">Даже если такого ещё нет, а скорее всего нет, я придумываю и воплощаю.</span> Полностью автоматизирую любой процесс. Инструменты позволяют сделать реальностью почти что угодно.</p>
+        <p class="eyebrow reveal">Мой манифест</p>
+        <p class="statement reveal">Я не продаю отчеты, часы работы джуниоров или бесконечные созвоны. Я внедряю готовый результат за дни, а не за месяцы. <span class="accent">Если нужной технологии еще нет на рынке - я соберу её из фундаментальных моделей сам.</span></p>
       </div>
     </section>
 
     <!-- INVITE -->
     <section class="section invite-sec">
       <div class="wrap">
-        <p class="invite reveal">Дальше то, что я сделал руками. Открывайте, трогайте, листайте. <span class="accent">Начните с ORBIS:</span> и сайт, и сам продукт.</p>
+        <p class="invite reveal">Ниже представлены проекты, которые я создал своими руками. Открывайте, слушайте и проверяйте.</p>
       </div>
     </section>
 
     <!-- ORBIS -->
     <section id="orbis" class="section">
-      <div class="wrap">
-        <div class="section-head reveal">
-          <span class="section-num">02 · Стартап</span>
-          <h2 class="section-title"><img src="assets/img/me/orbis-logo.png" alt="" class="orbis-logo">ORBIS</h2>
-          <p class="section-sub">Автономный ИИ для ресторанов. Мой главный проект.</p>
+      <div class="wrap grid-container">
+        <div class="col-left">
+          <div class="section-head reveal">
+            <span class="section-num">02 · Мой флагманский стартап</span>
+            <h2 class="section-title"><img src="assets/img/me/orbis-logo.png" alt="ORBIS Logo" class="orbis-logo">ORBIS</h2>
+            <p class="section-sub">Автономный ИИ-директор для ресторанов. Мой ключевой проект.</p>
+          </div>
+          <p class="body-text reveal">ORBIS - это автономный мозг ресторана, который живет в вашем WhatsApp. Он управляет заведением за кулисами: считает деньги, наводит порядок в счетах и общается с клиентами. Это не просто концепт - это работающий бизнес-инструмент, сокращающий операционные расходы на 30% с первого дня внедрения.</p>
+          <ul class="feature-list">
+            <li class="reveal"><span>01</span>Сканирует счета от поставщиков, на лету выявляет наценки и отбивает деньги</li>
+            <li class="reveal"><span>02</span>Контролирует еженедельный P&amp;L, отслеживая маржинальность каждого блюда</li>
+            <li class="reveal"><span>03</span>Отвечает на отзывы гостей на Yelp и Google Maps, превращая хейтеров в лояльных клиентов</li>
+            <li class="reveal"><span>04</span>Мгновенно консультирует линейный персонал по техкартам и аллергенам в меню</li>
+            <li class="reveal"><span>05</span>Оптимизирует график работы сотрудников на основе прогноза погоды и броней</li>
+            <li class="reveal"><span>06</span>Принимает звонки, бронирует столы и продает банкеты голосом 24/7</li>
+          </ul>
+          <a href="https://orbis.restaurant" target="_blank" rel="noopener" class="btn reveal">Открыть orbis.restaurant</a>
         </div>
-        <a href="https://orbis.restaurant" target="_blank" rel="noopener" class="shot reveal">
-          <img src="assets/img/sites/orbis.jpg" alt="ORBIS" loading="lazy">
-          <span class="shot-go">orbis.restaurant</span>
-        </a>
-        <p class="body-text reveal">ORBIS ведёт ресторан за кулисами и говорит со мной через WhatsApp. Не дашборд, который надо открывать, а агент, который работает сам и зовёт, только когда нужно решение.</p>
-        <ul class="feature-list">
-          <li class="reveal"><span>01</span>Ловит переплаты в счетах поставщиков и готовит спор</li>
-          <li class="reveal"><span>02</span>Держит маржу и P&amp;L под контролем каждый день</li>
-          <li class="reveal"><span>03</span>Отвечает на отзывы голосом заведения</li>
-          <li class="reveal"><span>04</span>Отвечает персоналу по операциям и аллергенам</li>
-          <li class="reveal"><span>05</span>Ставит смены под продажи и события</li>
-          <li class="reveal"><span>06</span>Ведёт бронь и звонки круглосуточно</li>
-          <li class="reveal"><span>07</span>Следит за лицензиями и сроками продления</li>
-        </ul>
-        <p class="body-text muted reveal">Настоящий стартап на стадии pre-seed. Захожу к первым инвесторам и веду всё сам, вплоть до изучения законодательства, на уровне штата и федеральном. Не презентация, а реальная компания.</p>
-        <a href="https://orbis.restaurant" target="_blank" rel="noopener" class="btn reveal">Открыть ORBIS</a>
+        
+        <!-- Interactive Dual Phone Mockup -->
+        <div class="col-right">
+          <div class="phone-mockup-wrap reveal">
+            
+            <!-- Phone 1: WhatsApp Simulator -->
+            <div class="phone-mockup">
+              <div class="phone-notch"><div class="phone-speaker"></div></div>
+              <div class="whatsapp-screen">
+                <div class="wa-header">
+                  <div class="wa-header-left">
+                    <div class="wa-back">‹</div>
+                    <div class="wa-avatar">
+                      <img src="assets/img/me/orbis-logo.png" alt="ORBIS AI">
+                    </div>
+                    <div>
+                      <div class="wa-contact-name">ORBIS Agent</div>
+                      <div class="wa-contact-status" id="wa-status">online</div>
+                    </div>
+                  </div>
+                  <div class="wa-header-right">
+                    <svg class="wa-icon" viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M17 10.5V7c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h12c.55 0 1-.45 1-1v-3.5l4 4v-11l-4 4z"/></svg>
+                  </div>
+                </div>
+                <div class="wa-chat" id="wa-chat-container">
+                  <div class="wa-typing" id="wa-typing-indicator">
+                    <span></span><span></span><span></span>
+                  </div>
+                </div>
+                <div class="wa-input">
+                  <span class="wa-plus">+</span>
+                  <div class="wa-inputbox">
+                    <span class="wa-placeholder">Сообщение</span>
+                  </div>
+                  <svg class="wa-mic" viewBox="0 0 24 24" width="16" height="16"><path fill="none" stroke="currentColor" stroke-width="1.8" d="M12 14c1.66 0 3-1.34 3-3V5c0-1.66-1.34-3-3-3S9 3.34 9 5v6c0 1.66 1.34 3 3 3z"/><path fill="none" stroke="currentColor" stroke-width="1.8" d="M17 11c0 2.76-2.24 5-5 5s-5-2.24-5-5H5c0 3.53 2.61 6.43 6 6.92V21h2v-3.08c3.39-.49 6-3.39 6-6.92h-2z"/></svg>
+                </div>
+              </div>
+            </div>
+            
+          </div>
+        </div>
       </div>
     </section>
 
@@ -166,136 +229,159 @@
     <section id="alter" class="section section-paper">
       <div class="wrap">
         <div class="section-head reveal">
-          <span class="section-num">03 · Личный агент</span>
-          <h2 class="section-title">Alter</h2>
-          <p class="section-sub">Мой личный ИИ-секретарь и цифровой двойник. Не ассистент, не чат-бот. Второе «я».</p>
+          <span class="section-num">03 · Цифровой двойник</span>
+          <h2 class="section-title">ИИ-агент Alter</h2>
+          <p class="section-sub">Мой личный виртуальный секретарь. Инструмент тотального контроля задач.</p>
         </div>
-        <p class="body-text reveal">Alter я построил под себя. Он живёт на моём сервере, говорит со мной в WhatsApp и знает обо мне всё сразу: работу, финансы, юридические дела, ORBIS, Ice & Instinct, творчество, личное. Помнит каждую мелочь и связывает её ровно тогда, когда нужно.</p>
+        <p class="body-text reveal">Alter - это приватный суперагент, развернутый на выделенном сервере. Он круглосуточно координирует все мои проекты и личные дела прямо в WhatsApp, исключая необходимость открывать десятки разных приложений.</p>
         <ul class="feature-list">
-          <li class="reveal"><span>01</span>Полный доступ к Gmail, Календарю, Диску и Контактам</li>
-          <li class="reveal"><span>02</span>Читает почту, отмечает срочное, пишет ответы за меня</li>
-          <li class="reveal"><span>03</span>Помнит всё и связывает события через недели</li>
-          <li class="reveal"><span>04</span>Сам напоминает о дедлайнах и выносит важное без запроса</li>
-          <li class="reveal"><span>05</span>Держит ORBIS, Ice & Instinct, финансы, юридическое, творчество</li>
-          <li class="reveal"><span>06</span>Один хозяин, приватный, не продукт. Делает всё, что попрошу</li>
+          <li class="reveal"><span>01</span>Полная бесшовная интеграция с Gmail, Диском, Календарем и Контактами</li>
+          <li class="reveal"><span>02</span>Умная фильтрация почты: выделяет критическое и пишет черновики ответов</li>
+          <li class="reveal"><span>03</span>Синтез информации по всем бизнес-направлениям и умные напоминания</li>
+          <li class="reveal"><span>04</span>Быстрый поиск и структурирование юридических и финансовых документов</li>
+          <li class="reveal"><span>05</span>Сквозное управление задачами по ORBIS и бренду Ice &amp; Instinct</li>
+          <li class="reveal"><span>06</span>Абсолютная конфиденциальность данных под моим личным контролем</li>
         </ul>
-        <p class="body-text muted reveal">Буквально всё. Хоть свайпает в Tinder за меня, если надо.</p>
+      </div>
+    </section>
+
+    <!-- ICE & INSTINCT -->
+    <section id="ice-instinct" class="section">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="section-num">04 · ИИ в премиум-сегменте</span>
+          <h2 class="section-title">Ice &amp; Instinct</h2>
+          <p class="section-sub">Интеллектуальный коктейльный консьерж. Персональный вкус вместо скучного меню.</p>
+        </div>
+        <a href="https://www.iceinstinct.com" target="_blank" rel="noopener" class="shot reveal">
+          <img src="assets/img/sites/iceinstinct.jpg" alt="Ice & Instinct" loading="lazy">
+          <span class="shot-go">iceinstinct.com</span>
+        </a>
+        <p class="body-text reveal">Для ультрапремиального бренда льда и напитков Ice &amp; Instinct я спроектировал и реализовал ИИ-консьержа (Palate Profiler). Система в диалоге определяет тончайшие вкусовые предпочтения гостя, считывает его эмоциональный фон и генерирует уникальную рекомендацию. Это инновационный гибрид высоких технологий и высокой гастрономии.</p>
+        <a href="https://www.iceinstinct.com" target="_blank" rel="noopener" class="btn reveal">Открыть Ice &amp; Instinct</a>
       </div>
     </section>
 
     <!-- MEDIA -->
-    <section id="examples" class="section">
+    <section id="examples" class="section section-paper">
       <div class="wrap">
         <div class="section-head reveal">
-          <span class="section-num">04 · Послушайте и посмотрите</span>
-          <h2 class="section-title">Музыка, клип, подкаст</h2>
+          <span class="section-num">05 · Звук и Видео</span>
+          <h2 class="section-title">Аудио и видеопродакшн на ИИ</h2>
+          <p class="section-sub">Проекты, полностью созданные мной с использованием искусственного интеллекта от идеи до финального сведения.</p>
         </div>
-        <article class="media-card reveal">
-          <div class="media-top"><span class="media-label">Музыка</span><h3 class="media-name">Trickster Collective</h3></div>
-          <div class="player">
-            <iframe loading="lazy" title="SoundCloud" allow="autoplay"
-              src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/trickster-us&color=%237c2b34&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=false&visual=true"></iframe>
-          </div>
-          <p class="media-desc">Пишу музыку и саундтреки с ИИ: от идеи до сведения. Это треки Trickster Collective.</p>
-        </article>
-        <article class="media-card reveal">
-          <div class="media-top"><span class="media-label">Видеоклип</span><h3 class="media-name">Сиреневый туман</h3></div>
-          <a class="yt-card" href="https://www.youtube.com/watch?v=Ke_FyA2T-r4" target="_blank" rel="noopener" style="background-image:url('assets/img/gen/lilac.jpg')">
-            <span class="play"><svg viewBox="0 0 24 24"><polygon points="6 4 20 12 6 20 6 4"></polygon></svg></span>
-            <span class="yt-badge">Смотреть на YouTube</span>
-          </a>
-          <p class="media-desc">Сценарий, кадры, монтаж клипа собраны на ИИ. Музыка плюс видео в одном.</p>
-        </article>
-        <article class="media-card reveal">
-          <div class="media-top"><span class="media-label">Подкаст</span><h3 class="media-name">NOX</h3></div>
-          <a class="yt-card" href="https://www.youtube.com/playlist?list=PLGgiWIPXWAapw3D71cgvO4DW4JmbeQtM8" target="_blank" rel="noopener" style="background-image:url('assets/img/sites/nox.jpg')">
-            <span class="play"><svg viewBox="0 0 24 24"><polygon points="6 4 20 12 6 20 6 4"></polygon></svg></span>
-            <span class="yt-badge">Слушать на YouTube</span>
-          </a>
-          <p class="media-desc">Перевод Невзорова на английский я отшлифовал искусственным интеллектом. Озвучка, видео, монтаж и сборка - тоже целиком на ИИ.</p>
-        </article>
+        
+        <div class="shot-grid">
+          <article class="media-card reveal">
+            <div class="media-top">
+              <span class="media-label">Музыкальный проект</span>
+              <h3 class="media-name">Trickster Collective</h3>
+            </div>
+            <div class="player">
+              <iframe loading="lazy" title="SoundCloud Player" allow="autoplay"
+                src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/trickster-us&color=%238c2630&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=false&visual=true"></iframe>
+            </div>
+            <p class="media-desc">Инструментальная музыка и саундтреки, полностью сгенерированные и сведенные с помощью нейросетей.</p>
+          </article>
+
+          <article class="media-card reveal">
+            <div class="media-top">
+              <span class="media-label">ИИ-Видеоклип</span>
+              <h3 class="media-name">Сиреневый туман</h3>
+            </div>
+            <a class="yt-card" href="https://www.youtube.com/watch?v=Ke_FyA2T-r4" target="_blank" rel="noopener" style="background-image:url('assets/img/gen/lilac.jpg')">
+              <span class="play">
+                <svg viewBox="0 0 24 24"><polygon points="6 4 20 12 6 20 6 4"></polygon></svg>
+              </span>
+              <span class="yt-badge">Смотреть на YouTube</span>
+            </a>
+            <p class="media-desc">ИИ-генерация видеоряда, написание сценария и монтаж клипа. Экспериментальное слияние звука и генеративного видео.</p>
+          </article>
+        </div>
       </div>
     </section>
 
-    <!-- ART -->
+    <!-- PODCAST NOX -->
+    <section id="podcast" class="section">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="section-num">06 · Локализация контента</span>
+          <h2 class="section-title">Подкаст NOX</h2>
+          <p class="section-sub">Перевод, озвучка и ИИ-продакшн англоязычной версии лекций Александра Невзорова.</p>
+        </div>
+        <a class="yt-card reveal" href="https://www.youtube.com/playlist?list=PLGgiWIPXWAapw3D71cgvO4DW4JmbeQtM8" target="_blank" rel="noopener" style="background-image:url('assets/img/sites/nox.jpg')">
+          <span class="play">
+            <svg viewBox="0 0 24 24"><polygon points="6 4 20 12 6 20 6 4"></polygon></svg>
+          </span>
+          <span class="yt-badge">Слушать на YouTube</span>
+        </a>
+        <p class="body-text reveal" style="margin-top:24px;">Я перевел лекции Александра Невзорова на английский язык, отшлифовав текст и интонации с помощью ИИ. Продакшн подкаста, озвучка и видеомонтаж серий полностью реализованы с использованием современных нейросетевых моделей.</p>
+        
+        <div class="player reveal" style="margin-bottom: 24px;">
+          <iframe loading="lazy" title="Spotify Podcast Player" src="https://open.spotify.com/embed/show/4pHRHg9l6JLBWSGayvPpww" width="100%" height="200" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+        </div>
+        
+        <a href="https://podcastnox.com/" target="_blank" rel="noopener" class="btn reveal">Открыть сайт podcastnox.com</a>
+      </div>
+    </section>
+
+    <!-- DIGITAL ART -->
     <section id="art" class="section section-paper">
       <div class="wrap">
         <div class="section-head reveal">
-          <span class="section-num">05 · Digital Art</span>
-          <h2 class="section-title">Генерирую и продаю</h2>
-          <p class="section-sub">Магазин Trickster Collective на Etsy. 36 продаж и растёт.</p>
+          <span class="section-num">07 · Генеративная графика</span>
+          <h2 class="section-title">Digital Art и принты</h2>
+          <p class="section-sub">Коллекция ИИ-арта. Реальные продажи интерьерных принтов на Etsy.</p>
         </div>
         <div class="art-grid">
-          <a href="https://www.etsy.com/shop/TricksterCollective" target="_blank" rel="noopener" class="art-tile reveal"><img src="assets/img/art/art1.jpg" alt="" loading="lazy"></a>
-          <a href="https://www.etsy.com/shop/TricksterCollective" target="_blank" rel="noopener" class="art-tile reveal"><img src="assets/img/art/art2.jpg" alt="" loading="lazy"></a>
-          <a href="https://www.etsy.com/shop/TricksterCollective" target="_blank" rel="noopener" class="art-tile reveal"><img src="assets/img/art/art3.jpg" alt="" loading="lazy"></a>
-          <a href="https://www.etsy.com/shop/TricksterCollective" target="_blank" rel="noopener" class="art-tile reveal"><img src="assets/img/art/art6.jpg" alt="" loading="lazy"></a>
+          <a href="https://www.etsy.com/shop/TricksterCollective" target="_blank" rel="noopener" class="art-tile reveal"><img src="assets/img/art/art1.jpg" alt="Art 1" loading="lazy"></a>
+          <a href="https://www.etsy.com/shop/TricksterCollective" target="_blank" rel="noopener" class="art-tile reveal"><img src="assets/img/art/art2.jpg" alt="Art 2" loading="lazy"></a>
+          <a href="https://www.etsy.com/shop/TricksterCollective" target="_blank" rel="noopener" class="art-tile reveal"><img src="assets/img/art/art3.jpg" alt="Art 3" loading="lazy"></a>
+          <a href="https://www.etsy.com/shop/TricksterCollective" target="_blank" rel="noopener" class="art-tile reveal"><img src="assets/img/art/art6.jpg" alt="Art 4" loading="lazy"></a>
         </div>
-        <a href="https://www.etsy.com/shop/TricksterCollective" target="_blank" rel="noopener" class="btn reveal">Весь магазин на Etsy</a>
+        <a href="https://www.etsy.com/shop/TricksterCollective" target="_blank" rel="noopener" class="btn reveal">Магазин на Etsy (Trickster Collective)</a>
       </div>
     </section>
 
-    <!-- SITES -->
-    <section id="sites" class="section">
+    <!-- YOUTUBE & CLONE REFLEX -->
+    <section id="video" class="section">
       <div class="wrap">
         <div class="section-head reveal">
-          <span class="section-num">06 · Сделано мной</span>
-          <h2 class="section-title">Сайты и бренды</h2>
-        </div>
-        <div class="shot-grid">
-          <a href="https://www.iceinstinct.com" target="_blank" rel="noopener" class="shot reveal">
-            <img src="assets/img/sites/iceinstinct.jpg" alt="Ice & Instinct" loading="lazy">
-            <span class="shot-cap"><strong>Ice &amp; Instinct</strong> премиум коктейль-консьерж с ИИ</span>
-          </a>
-          <a href="https://dittoai.online" target="_blank" rel="noopener" class="shot reveal">
-            <img src="assets/img/sites/ditto.jpg" alt="Ditto AI Studio" loading="lazy">
-            <span class="shot-cap"><strong>Ditto AI Studio</strong> сайты и WhatsApp-агенты на ИИ</span>
-          </a>
-          <a href="https://www.youtube.com/playlist?list=PLGgiWIPXWAapw3D71cgvO4DW4JmbeQtM8" target="_blank" rel="noopener" class="shot reveal">
-            <img src="assets/img/sites/nox.jpg" alt="NOX" loading="lazy">
-            <span class="shot-cap"><strong>NOX</strong> подкаст, разбор Невзорова на английском</span>
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- VIDEO -->
-    <section id="video" class="section section-paper">
-      <div class="wrap">
-        <div class="section-head reveal">
-          <span class="section-num">07 · Видео и YouTube</span>
-          <h2 class="section-title">Сценарий, голос, картинка, монтаж</h2>
-          <p class="section-sub">На ИИ, от первого кадра. Канал Clone Reflex.</p>
+          <span class="section-num">08 · YouTube-продакшн</span>
+          <h2 class="section-title">Канал Clone Reflex</h2>
+          <p class="section-sub">Генерация видео, аватаров и монтаж целиком на ИИ.</p>
         </div>
         <a class="yt-card reveal" href="https://www.youtube.com/watch?v=HlvOeuYrppw" target="_blank" rel="noopener" style="background-image:url('assets/img/gen/anatomy.jpg')">
-          <span class="play"><svg viewBox="0 0 24 24"><polygon points="6 4 20 12 6 20 6 4"></polygon></svg></span>
-          <span class="yt-badge">Anatomy of Thought, на YouTube</span>
+          <span class="play">
+            <svg viewBox="0 0 24 24"><polygon points="6 4 20 12 6 20 6 4"></polygon></svg>
+          </span>
+          <span class="yt-badge">Clone Reflex на YouTube</span>
         </a>
-        <a href="https://www.youtube.com/@CloneReflex" target="_blank" rel="noopener" class="btn reveal">YouTube канал</a>
+        <p class="body-text reveal" style="margin-top:24px;">Создание ИИ-сценариев, генерация дикторов, клонирование голоса и автоматический монтаж динамических роликов для YouTube-канала Clone Reflex.</p>
+        <a href="https://www.youtube.com/@CloneReflex" target="_blank" rel="noopener" class="btn reveal">Открыть YouTube-канал</a>
       </div>
     </section>
 
     <!-- SPHERES -->
-    <section id="spheres" class="section">
+    <section id="spheres" class="section section-paper">
       <div class="wrap">
         <div class="section-head reveal">
-          <span class="section-num">08 · Карта</span>
+          <span class="section-num">09 · Карта навыков</span>
           <h2 class="section-title">Что я делаю с ИИ</h2>
         </div>
         <div class="sphere-grid">
-          <div class="sphere reveal">Музыка</div>
-          <div class="sphere reveal">Digital Art</div>
-          <div class="sphere reveal">Видео и YouTube</div>
-          <div class="sphere reveal">Подкаст NOX</div>
-          <div class="sphere reveal">Стартап ORBIS</div>
-          <div class="sphere reveal">Агент Alter</div>
-          <div class="sphere reveal">Сайты и деплой</div>
-          <div class="sphere reveal">Контент-заводы</div>
-          <div class="sphere reveal">ИИ-агенты и автоматизации</div>
-          <div class="sphere reveal">Google реклама и аккаунты</div>
-          <div class="sphere reveal">Аналитика и CRM</div>
-          <div class="sphere reveal">Анимация и моушн</div>
-          <div class="sphere reveal">Генерация изображений и видео</div>
+          <div class="sphere reveal">ИИ-агенты для бизнеса</div>
+          <div class="sphere reveal">WhatsApp-автоматизация</div>
+          <div class="sphere reveal">Сайты и быстрый деплой</div>
+          <div class="sphere reveal">Автоматические контент-заводы</div>
+          <div class="sphere reveal">Клонирование голоса и озвучка</div>
+          <div class="sphere reveal">Настройка Google Ads</div>
+          <div class="sphere reveal">Сквозная аналитика и CRM</div>
+          <div class="sphere reveal">Видеомонтаж и графика</div>
+          <div class="sphere reveal">Генерация музыки и саунд-дизайн</div>
+          <div class="sphere reveal">Digital Art на Etsy</div>
+          <div class="sphere reveal">Моушн-дизайн и концепты</div>
+          <div class="sphere reveal">Промпт-инжиниринг</div>
         </div>
         <p class="body-text muted center reveal">Чего не умею сегодня, умею к утру. Это режим, в котором я живу.</p>
       </div>
@@ -310,17 +396,18 @@
           <a href="https://www.linkedin.com/in/teimuraz-benidze/" target="_blank" rel="noopener">LinkedIn</a>
           <a href="https://www.instagram.com/tricksterny/" target="_blank" rel="noopener">Instagram</a>
           <a href="https://www.facebook.com/temo.benidze" target="_blank" rel="noopener">Facebook</a>
-          <a href="https://www.youtube.com/@CloneReflex" target="_blank" rel="noopener">YouTube · Reflex</a>
+          <a href="https://www.youtube.com/@CloneReflex" target="_blank" rel="noopener">YouTube</a>
         </nav>
       </div>
       <footer class="footer">
         <p>Теймураз Бенидзе. Нью-Йорк.</p>
-        <p class="footer-fine">Эта страница, её тексты и медиа сделаны мной с искусственным интеллектом.</p>
+        <p class="footer-fine">Эта страница, ее тексты и медиа сделаны мной с искусственным интеллектом.</p>
       </footer>
     </section>
 
   </main>
 
+  <!-- GSAP & Lenis CDN Libraries -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
   <script src="https://unpkg.com/lenis@1.1.9/dist/lenis.min.js"></script>
