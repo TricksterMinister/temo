@@ -1000,9 +1000,9 @@ h1, h2, h3 {
 
 /* Languages */
 .langs {
-  margin: 30px 0 8px;
-  padding-top: 26px;
-  border-top: 1px solid var(--line-soft);
+  margin: 0;
+  padding-top: 0;
+  border-top: none;
 }
 
 .langs-label {
@@ -1033,6 +1033,23 @@ h1, h2, h3 {
   margin-bottom: 0;
 }
 
+/* Extra grid alignment row for About section */
+.about-extra-grid {
+  display: grid;
+  gap: 40px;
+  margin-top: 48px;
+  padding-top: 48px;
+  border-top: 1px solid var(--line-soft);
+  align-items: start;
+}
+
+@media (min-width: 780px) {
+  .about-extra-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+  }
+}
+
 /* ============================================================
    IPHONE MOCKUP & CHAT SIMULATOR (Orbis Agent Showcase)
    ============================================================ */
@@ -1051,8 +1068,8 @@ h1, h2, h3 {
   background-color: #060606;
   border-radius: 46px;
   box-shadow:
-      0 0 0 3px #1c3a5e,
-      0 0 0 6px #2a5282,
+      0 0 0 3px #2c2a29,
+      0 0 0 6px #423f3e,
       0 40px 80px rgba(0,0,0,0.6);
   padding: 6px;
   flex-shrink: 0;
@@ -1418,42 +1435,36 @@ h1, h2, h3 {
   }
   
   /* horizontal grid alignment for title / sub */
+  /* Clean vertical stack for desktop headers */
   .section-head {
-    display: grid;
-    grid-template-columns: 1fr minmax(0, auto);
-    grid-template-areas: "num deck" "title title";
-    align-items: end;
-    column-gap: 48px;
-    row-gap: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
     padding-top: 24px;
     border-top: 1px solid var(--line);
-    margin-bottom: 56px;
+    margin-bottom: 40px;
   }
   
   .section-head .section-num {
-    grid-area: num;
-    margin-bottom: 0;
-    align-self: start;
+    margin-bottom: 8px;
   }
   
   .section-head .section-title {
-    grid-area: title;
+    margin-bottom: 12px;
   }
   
   .section-head .section-sub {
-    grid-area: deck;
-    margin-top: 0;
-    justify-self: end;
-    text-align: right;
-    max-width: 38ch;
+    margin-top: 4px;
+    max-width: 55ch;
+    text-align: left;
     font-size: clamp(15px, 1.45vw, 18px);
     line-height: 1.45;
   }
   
   .about-grid {
-    grid-template-columns: 1.25fr 0.75fr;
-    gap: 70px;
-    align-items: flex-start;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
   }
   
   .duel {
@@ -1490,6 +1501,10 @@ h1, h2, h3 {
   
   .feature-list li {
     break-inside: avoid;
+  }
+  
+  #orbis .feature-list {
+    columns: 1;
   }
   
   .media-card {
@@ -1835,7 +1850,7 @@ h1, h2, h3 {
 @media (min-width: 1100px) {
   .grid-container {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1.15fr 0.85fr;
     gap: 80px;
     align-items: center;
   }
